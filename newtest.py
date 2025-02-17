@@ -212,18 +212,18 @@ try:
     sanatan.send_keys(newfiereponame)
     time.sleep(10)
     print("newfie name created")
-except NoSuchElementException:
+except:
     print("error10001")
 try:
     commiert.click()
     print("com")
-except NoSuchElementException:
+except:
     print("com1 error")
 time.sleep(5)
 try:
     commiert2.click()
     print("com2")
-except NoSuchElementException:
+except:
     print("com2 error")
 
 driver.get(crreateanewblankworkflow)
