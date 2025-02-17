@@ -215,12 +215,20 @@ try:
 except:
     print("error10001")
 try:
+    comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button'
+    commiert = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, comitbut))
+        )
     commiert.click()
-    print("com")
+    print("com1")
 except:
     print("com1 error")
 time.sleep(5)
 try:
+    comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button'
+    commiert2 = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, comitbut))
+        )
     commiert2.click()
     print("com2")
 except:
