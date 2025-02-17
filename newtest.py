@@ -198,19 +198,33 @@ time.sleep(10)
 
 driver.get(gitblankfile)
 time.sleep(60)
-ActionChains(driver).send_keys(newfie).perform()
-time.sleep(30)
-print("newfie created")
+try:
+    ActionChains(driver).send_keys(newfie).perform()
+    time.sleep(30)
+    print("newfie created")
+except NoSuchElementException:
+    print("error101")
 djrock = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div[2]/span[2]/input'
 sanatan = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, djrock))
     )
-sanatan.send_keys(newfiereponame)
-time.sleep(10)
-print("newfie name created")
-commiert.click()
+try:
+    sanatan.send_keys(newfiereponame)
+    time.sleep(10)
+    print("newfie name created")
+except NoSuchElementException:
+    print("error10001")
+try:
+    commiert.click()
+    print("com")
+except NoSuchElementException:
+    print("com1 error")
 time.sleep(5)
-commiert2.click()
+try:
+    commiert2.click()
+    print("com2")
+except NoSuchElementException:
+    print("com2 error")
 
 driver.get(crreateanewblankworkflow)
 #time.sleep(20)
