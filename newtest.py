@@ -175,38 +175,39 @@ time.sleep(10)
 ActionChains(driver).send_keys(docke1).perform()
 time.sleep(20)
 
-djrock = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div/div[2]/span[2]/input'
-sanatan = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, djrock))
+djrockk = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div/div[2]/span[2]/input'
+sanataan = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, djrockk))
     )
-sanatan.send_keys(dokereponame)
+sanataan.send_keys(dokereponame)
 
-comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button'
+comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button/span/span'
 commiert = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, comitbut))
     )
 commiert.click()
 
-comitbut2 = '//*[@id="__primerPortalRoot__"]/div/div/div/div[3]/button[2]'
+comitbut2 = '//*[@id="__primerPortalRoot__"]/div/div/div/div[3]/button[2]/span/span'
+             
 commiert2 = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, comitbut2))
     )
 commiert2.click()
-
-time.sleep(60)
+print("docker created")
+time.sleep(10)
 
 driver.get(gitblankfile)
-time.sleep(10)
-#cerrix = 500
-#creeiy = 320
-#actions.move_by_offset(0, 0).click().perform()
-#actions.move_by_offset(cerrix, creeiy).click().perform()
-#actions.move_by_offset(cerrix, creeiy).click().perform()
-#time.sleep(10)
+time.sleep(60)
 ActionChains(driver).send_keys(newfie).perform()
 time.sleep(30)
+print("newfie created")
+djrock = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div[2]/span[2]/input'
+sanatan = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, djrock))
+    )
 sanatan.send_keys(newfiereponame)
 time.sleep(10)
+print("newfie name created")
 commiert.click()
 time.sleep(5)
 commiert2.click()
