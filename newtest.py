@@ -149,7 +149,7 @@ time.sleep(30)
 #   )
 try:
     fillo = WebDriverWait(driver, 50).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id=":r5:"]'))
+            EC.presence_of_element_located((By.XPATH, '//*[@id=":r5:"]')))
     time.sleep(5)
     fillo.send_keys(gitreponame)
 except NoSuchElementException:
