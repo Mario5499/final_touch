@@ -5,7 +5,7 @@ gitpass = "nOeFvigOq7Gnd"
 gitdashboard = "https://github.com/dashboard"
 gitnew = "https://github.com/new"
 gitprofie = "https://github.com/"+gitid
-gitreponame = "finnally"
+gitreponame = "bossofthebosses"
 giturl = "https://github.com/"
 gitlogurl = "https://github.com/login"
 gitblankfile = giturl+gitid+"/"+gitreponame+"/"+"new/main"
@@ -112,7 +112,8 @@ os.system(f"python3 {file_name11}")
 '''
 
 
-workingflow = '''name: Docker Image CI
+workingflow = '''
+name: Docker Image CI
 
 on:
   push:
@@ -134,5 +135,5 @@ jobs:
       run: docker build -t my-app .
       
     - name: Run the Docker container
-      run: docker run --rm my-app python3 newtest.py
+
 '''
