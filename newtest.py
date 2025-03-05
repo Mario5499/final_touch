@@ -104,9 +104,7 @@ def kinih (userid,passid):
     print(manc)
     driver.close()
 
-    driver.switch_to.window(driver.window_handles[1])
-    time.sleep(4)
-    driver.close()
+    time.sleep(1)
     driver.switch_to.window(driver.window_handles[0])
     time.sleep(10)
 
