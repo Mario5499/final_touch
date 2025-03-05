@@ -225,9 +225,9 @@ except:
     print("com1 error")
 time.sleep(5)
 try:
-    comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button'
+    comitbut22 = '//*[@id="__primerPortalRoot__"]/div/div/div/div[3]/button[2]'
     commiert2 = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, comitbut))
+        EC.presence_of_element_located((By.XPATH, comitbut22))
         )
     commiert2.click()
     print("com2")
@@ -237,16 +237,29 @@ except:
 driver.get(crreateanewblankworkflow)
 #time.sleep(20)
 time.sleep(60)
-#actions.move_by_offset(0, 0).click().perform()
-#actions.move_by_offset(cerrix, creeiy).click().perform()
-#actions.move_by_offset(cerrix, creeiy).click().perform()
-#time.sleep(3)
 ActionChains(driver).send_keys(workingflow).perform()
 time.sleep(20)
-commiert.click()
+try:
+    comitbut = '//*[@id="repo-content-pjax-container"]/react-app/div/div/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div[2]/button'
+    commiert = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, comitbut))
+        )
+    commiert.click()
+    print("com1")
+except:
+    print("com1 error")
 time.sleep(5)
-commiert2.click()
+try:
+    comitbut22 = '//*[@id="__primerPortalRoot__"]/div/div/div/div[3]/button[2]'
+    commiert2 = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, comitbut22))
+        )
+    commiert2.click()
+    print("com2")
+except:
+    print("com2 error")
 
+print("Done Everything You Are Great")
 
 time.sleep(50)
 driver.quit()
