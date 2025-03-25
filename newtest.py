@@ -154,11 +154,14 @@ except NoSuchElementException:
     print("error")
 #fillo.send_keys(gitreponame)
 time.sleep(5)
-dilof = '/html/body/div[1]/div[5]/main/react-app/div/form/div[5]/button'
-sudd = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, dilof))
-    )
-sudd.click()
+crtbutton = driver.find_element(By.XPATH, "//button[span/span[text()='Create repository']]")
+crtbutton.click()
+
+#dilof = '/html/body/div[1]/div[5]/main/react-app/div/form/div[5]/button'
+#sudd = WebDriverWait(driver, 10).until(
+#        EC.presence_of_element_located((By.XPATH, dilof))
+#    )
+#sudd.click()
 time.sleep(10)
 # to create a blank file in a new repository
 driver.get(gitblankfile)
