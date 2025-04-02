@@ -166,6 +166,7 @@ time.sleep(10)
 # to create a blank file in a new repository
 driver.get(gitblankfile)
 time.sleep(10)
+print("done tile gitblankfile")
 #driver.set_window_size(1354, 610)
 #cerrix = 500
 #creeiy = 320
