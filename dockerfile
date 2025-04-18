@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y \
     chromium-chromedriver \
     libnss3 \
     libgbm1 \
+    tor \
+    curl \
+    gnupg \
+    ca-certificates \
     libatk-bridge2.0-0 \
     libgtk-3-0 \
     libx11-xcb1 \
